@@ -38,17 +38,32 @@
       </nav>
     </header>
     <main class="container-md">
-      <form>
+      <form id="newTaskForm">
         <div class="input-group my-3">
           <span class="input-group-text">Name</span>
-          <select class="form-control" id="names">
-            <option>Select a user...</option>
+          <select class="form-select" id="names" required>
+            <option value="">Select a user...</option>
           </select>
           <span class="input-group-text">Category</span>
-          <select class="form-control" id="categories">
-            <option>Select a category...</option>
+          <select class="form-select" id="categories" required>
+            <option value="">Select a category...</option>
           </select>
         </div>
+        <div class="input-group my-3">
+          <span class="input-group-text">Priority</span>
+          <select class="form-select" id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <span class="input-group-text">Deadline (YYYY-MM-DD)</span>
+          <input class="form-control" id="deadline" required />
+        </div>
+        <div class="input-group my-3">
+          <span class="input-group-text">Task</span>
+          <textarea class="form-control" id="task" required></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Add</button>
       </form>
     </main>
     <script
